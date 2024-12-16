@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interacción con el contrato - SimpleDEX</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interacción con SimpleDEX</h1>
+        </header>
+
+        <!-- Mostrar la cuenta conectada -->
+        <section class="info">
+            <p id="account">Conectando con MetaMask...</p>
+        </section>
+
+        <!-- Formulario para añadir liquidez -->
+        <section class="form-section">
+            <h2>Añadir Liquidez</h2>
+            <div class="form-group">
+                <input type="number" id="amountA" placeholder="Cantidad de A" class="input-field">
+                <input type="number" id="amountB" placeholder="Cantidad de B" class="input-field">
+            </div>
+            <button id="addLiquidity" class="btn">Añadir Liquidez</button>
+        </section>
+
+        <!-- Formulario para eliminar liquidez -->
+        <section class="form-section">
+            <h2>Eliminar Liquidez</h2>
+            <div class="form-group">
+                <input type="number" id="removeAmountA" placeholder="Cantidad de A" class="input-field">
+                <input type="number" id="removeAmountB" placeholder="Cantidad de B" class="input-field">
+            </div>
+            <button id="removeLiquidity" class="btn">Eliminar Liquidez</button>
+        </section>
+
+        <!-- Formulario para intercambiar Tokens -->
+        <section class="form-section">
+            <h2>Intercambiar Tokens</h2>
+            <div class="form-group">
+                <input type="number" id="swapAmount" placeholder="Cantidad de A" class="input-field">
+            </div>
+            <button id="swapAforB" class="btn">Intercambiar A por B</button>
+            <button id="swapBforA" class="btn">Intercambiar B por A</button>
+        </section>
+
+        <!-- Mostrar el precio -->
+        <section class="info">
+            <h2>Obtener Precio</h2>
+            <button id="getPrice" class="btn">Obtener Precio</button>
+            <p id="price">Precio: 0</p>
+        </section>
+    </div>
+
+    <!-- Incluir Web3.js -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+    <!-- Tu archivo JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
+
